@@ -1,0 +1,109 @@
+﻿@page "/profile"
+    <!-- Top Navigation bar -->
+    <nav class="navbar navbar-expand bg-dark navbar-dark fixed-top">
+
+        <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="oi oi-menu"></span>
+            </button>
+            <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item bg-dark text-white" href="/counter">Counter</a>
+                <a class="dropdown-item bg-dark text-white" href="/fetchdata">Data Table</a>
+                <a class="dropdown-item bg-dark text-white" href="#">Library</a>
+                <a class="dropdown-item bg-dark text-white" href="#">Subscriptions</a>
+                <a class="dropdown-item bg-dark text-white" href="#">Saved</a>
+                <a class="dropdown-item bg-dark text-white" href="#">Events</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item bg-dark text-white" href="#">Help</a>
+                <a class="dropdown-item bg-dark text-white" href="#">About</a>
+                <a class="dropdown-item bg-dark text-white" href="#">Contact Us</a>
+                <a class="dropdown-item bg-dark text-white" href="#">Advertise</a>
+            </div>
+        </div>
+
+        <a class="navbar-brand px-3" href="/">Studio 37</a>
+
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <button class="btn btn-dark" type="button" href="#">
+                    <span class="oi oi-magnifying-glass"></span>
+                </button>
+            </li>
+
+            <li class="nav-item dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="oi oi-person"></span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="dropdownMenuButton2">
+                    <a class="dropdown-item bg-dark text-white" href="/profile">Profile</a>
+                    <a class="dropdown-item bg-dark text-white" href="#">Notifications</a>
+                    <a class="dropdown-item bg-dark text-white" href="#">Messages</a>
+                    <a class="dropdown-item bg-dark text-white" href="#">Groups</a>
+                    <a class="dropdown-item bg-dark text-white" href="#">Settings</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Header info -->
+    <div class="container-fluid my-4">
+        <div class="row">
+            <div class="clearfix col-4">
+                <img src="300px-Leonardo_DiCaprio_Laughing.jpg" class="img-fluid rounded-circle px-4 float-right" alt="Haha">
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <h2><a class="nav-link text-dark px-5 pt-5 pb-3" href="#">followers</a></h2>
+                    <h2><a class="nav-link text-dark px-5 pt-5 pb-3" href="#">following</a></h2>
+                </div>
+                <h4 class="pl-5">name</h4>
+                <h6 class="pl-5">Description</h6>
+                <h6 class="pl-5">website link</h6>
+            </div>
+            <div class="clearfix col-4">
+                <button class="btn btn-outline-danger mx-5 my-5 w-25" href="#">Edit Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Follow button -->
+    <div class="container-fluid py-4">
+        <button class="btn btn-block btn-outline-danger ">Follow</button>
+
+    </div>
+
+    <div class="dropdown-divider"></div>
+
+<div calss="conatiner my-4">
+    <button class="btn btn-block font-weight-bold text-muted" href="#">
+        <span class="oi oi-plus"></span>
+          New Post
+    </button>
+</div>
+
+    <!-- Navbar tabs-->
+    <!-- This is only for professionals, regular profile only has timeline-->
+    <ul class="nav nav-tabs nav-justified my-2">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#classes">Classes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#community">Community</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane container active" id="home">...</div>
+        <div class="tab-pane container fade" id="classes">...</div>
+        <div class="tab-pane container fade" id="community">...</div>
+    </div>
+
+
+    @code {
+
+    }

@@ -1,0 +1,101 @@
+@page "/fetchdata"
+@inject HttpClient Http
+
+    <nav class="navbar navbar-expand bg-dark navbar-dark fixed-top">
+
+        <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="oi oi-menu"></span>
+            </button>
+            <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item bg-dark text-white" href="/counter">Counter</a>
+                <a class="dropdown-item bg-dark text-white" href="/fetchdata">Data Table</a>
+                <a class="dropdown-item bg-dark text-white" href="#">Library</a>
+                <a class="dropdown-item bg-dark text-white" href="#">Subscriptions</a>
+                <a class="dropdown-item bg-dark text-white" href="#">Saved</a>
+                <a class="dropdown-item bg-dark text-white" href="#">Events</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item bg-dark text-white" href="#">Help</a>
+                <a class="dropdown-item bg-dark text-white" href="#">About</a>
+                <a class="dropdown-item bg-dark text-white" href="#">Contact Us</a>
+                <a class="dropdown-item bg-dark text-white" href="#">Advertise</a>
+            </div>
+        </div>
+
+        <a class="navbar-brand px-3" href="/">Studio 37</a>
+
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <button class="btn btn-dark" type="button" href="#">
+                    <span class="oi oi-magnifying-glass"></span>
+                </button>
+            </li>
+
+            <li class="nav-item dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="oi oi-person"></span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="dropdownMenuButton2">
+                    <a class="dropdown-item bg-dark text-white" href="/profile">Profile</a>
+                    <a class="dropdown-item bg-dark text-white" href="#">Notifications</a>
+                    <a class="dropdown-item bg-dark text-white" href="#">Messages</a>
+                    <a class="dropdown-item bg-dark text-white" href="#">Groups</a>
+                    <a class="dropdown-item bg-dark text-white" href="#">Settings</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temp. (C)</th>
+                <th>Temp. (F)</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in forecasts)
+            {
+                <tr>
+                    <td>@forecast.Date.ToShortDateString()</td>
+                    <td>@forecast.TemperatureC</td>
+                    <td>@forecast.TemperatureF</td>
+                    <td>@forecast.Summary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private WeatherForecast[] forecasts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+    }
+
+    public class WeatherForecast
+    {
+        public DateTime Date { get; set; }
+
+        public int TemperatureC { get; set; }
+
+        public string Summary { get; set; }
+
+        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    }
+}
