@@ -1,6 +1,4 @@
-﻿@page "/upload"
-
-<nav class="navbar navbar-expand bg-dark navbar-dark fixed-top">
+﻿<nav class="navbar navbar-expand bg-dark navbar-dark fixed-top">
 
     <div class="dropdown">
         <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,27 +43,3 @@
         </li>
     </ul>
 </nav>
-
-
-<div class="form-group col-8 mx-auto">
-    <div class="custom-file my-2" id="customFile3" lang="es">
-        <input type="file" class="custom-file-input" id="photoPost" aria-describedby="fileHelp">
-        <label class="custom-file-label" for="photoPost">
-            Select file...
-        </label>
-    </div>
-    <input type="text" class="form-control my-2" id="title" placeholder="title">
-    <textarea class="form-control my-2" rows="5" id="description" placeholder="description"></textarea>
-    <div class="custom-file my-2" id="customFile4" lang="es">
-        <input type="file" class="custom-file-input" id="thumbnailImage" aria-describedby="fileHelp">
-        <label class="custom-file-label" for="thumbnailImage">
-            Upload Thumbnail...
-        </label>
-    </div>
-</div>
-<button type="submit" class="btn btn-light btn-block col-8 mx-auto">Upload</button>
-
-
-@code {
-
-}
