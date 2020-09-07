@@ -1,25 +1,23 @@
-﻿<div class="card col-8 border-0">
+﻿<div class="card col-8 border-0" style="max-width: 1000px">
 	<div class="row">
-		<div class="col-4">
-			<div class="embed-responsive-16by9 py-2">
-				<img src="disappointed.jpg" class="img-fluid" alt="">
-			</div>
+		<div class="col-4" style="max-width: 200px">
+            <div class="embed-responsive-16by9 py-2">
+                <a href="/video" class="btn stretched-link px-0 py-0"><img src="disappointed.jpg" class="img-fluid" alt=""></a>
+            </div>
 		</div>
 		<div class="row py-2">
-			<div class="card-block px-2">
+			<div class="card-block px-2 overflow-hidden" style="max-width: 500px">
 				<h5 class="card-title">Title of video</h5>
-				<p class="card-text">Few lines of description</p>
+				<p class="card-text text-truncate">Few lines of description. make the description longer. Make it even longer</p>
 			</div>
-            <div>
-                <a href="/editVideo" class="btn mx-4 my-4 text-decoration-none">
-                        <i class="far fa-edit"></i>
+            <div class="row pl-4 py-4">
+                <a href="/editVideo" class="btn text-decoration-none mt-1">
+                    <i class="far fa-edit"></i>
                 </a>
-            </div>
-			<div>
-                <button class="btn mx-4 my-4" data-toggle="modal" data-target="#deleteUserVideo">
+                <button class="btn" data-toggle="modal" data-target="#deleteUserVideo">
                     <i class="far fa-trash-alt"></i>
                 </button>
-			</div>
+            </div>
 		</div>
 	</div>
 </div>
