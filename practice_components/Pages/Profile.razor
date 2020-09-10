@@ -31,6 +31,16 @@
 
     <div class="dropdown-divider"></div>
 
+    <div class="btn-group btn-block">
+        <a href="/profile" class="btn font-weight-bold text-muted">
+            Timeline
+        </a>
+        <a href="/profileClasses" class="btn font-weight-bold text-muted">
+            Classes
+        </a>
+    </div>
+<div class="dropdown-divider"></div>
+
 
 <!--Create post Modal & Open Modal button-->
     <div calss="conatiner my-4">
@@ -121,41 +131,10 @@
 </div>
 
 
-    <a href="/uploadVideo" class="text-decoration-none">
-        <div calss="conatiner my-4">
-            <button class="btn btn-block font-weight-bold text-muted" type="button">
-                <span class="oi oi-plus"></span>
-                New Class
-            </button>
-        </div>
-    </a>
-
+<Post/>
 <Post/>
 
-    <!-- Navbar tabs-->
-    <!-- This is only for professionals, regular profile only has timeline-->
-    <ul class="nav nav-tabs nav-justified my-2">
-        <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#classes">Classes</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#community">Community</a>
-        </li>
-    </ul>
-
-    <!-- Tab panes -->
-    <div class="tab-content">
-        <div class="tab-pane container active" id="home">
-            <Post />
-        </div>
-        <div class="tab-pane container fade" id="classes">...</div>
-        <div class="tab-pane container fade" id="community">...</div>
-    </div>
-
-
+<Footer/>
         
 
 
